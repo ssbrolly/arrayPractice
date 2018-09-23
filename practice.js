@@ -11,39 +11,54 @@ const cars = [
     {brand:'Nissan', model:'Maxima', year:'2016',type:'Sedan'}
   ];
 
-// 1. console.log all the brand names contained in the cars array
-cars.forEach(car => {
-    console.log(car.brand);
-});
+// // 1. console.log all the brand names contained in the cars array
+// cars.forEach(car => {
+//     console.log(car.brand);
+// });
 
-// 2. filter all cars that were built after year 2000
-cars.forEach(car => {
-    if(car.year > 2000) {
-        console.log(car);
-    };
-});
 
-// 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
+// // 2. filter all cars that were built after year 2000
+// cars.forEach(car => {
+//     if(car.year > 2000) {
+//         console.log(car.year);
+//     };
+// });
+
+// function filterCars(car) {
+//     return car.year > 2000;
+// };
+// console.log(cars.filter(filterCars));
+
+
+
+// // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
 let count = 0;
 cars.forEach(car => {
-    if(car.year <= 2000){
+    if(car.year <= 2000) {
         count++;
     };
 });
 console.log(count);
 
- // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
+let count1 = cars.reduce(total, car => {
+    if(car.year <= 2000){
+        total++;
+    };
+    return total;
+}, 0);
+console.log(count1);
 
-let arr = [];
-for (let i=1; i<=100; i++) {
-    console.log(arr.push(i));
-};
 
-arr.splice(50, 50);
-console.log(arr);
 
-let newArr = [];
-for (let i=2; i<=100; i+=2) {
-    newArr.push(i);
-};
-console.log(newArr);
+//  // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
+
+
+
+//  5. sort the cars array by model name in ascending order
+  //     hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
+
+
+
+// 1. filter arr to only contain even numbers and save into new array.
+// 2. construct a new array that only contains numbers 1 through 50.
+
