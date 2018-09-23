@@ -78,6 +78,14 @@ const cars = [
 //     }, 0);
 
 //     console.log(totalCars2);
+
+// function oldCars(total, cars) {
+//   if (cars.year <= 2000) {
+//       total++;
+//   };
+//   return total;
+// };
+// console.log(cars.reduce(oldCars, 0));
     
   // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
   //    example result is below.

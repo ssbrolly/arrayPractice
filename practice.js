@@ -11,41 +11,39 @@ const cars = [
     {brand:'Nissan', model:'Maxima', year:'2016',type:'Sedan'}
   ];
 
-  // 1. console.log all the brand names contained in the cars array
-
+// 1. console.log all the brand names contained in the cars array
 cars.forEach(car => {
-    console.log(car.brand)
+    console.log(car.brand);
 });
 
-  // 2. filter all cars that were built after year 2000
-
-  cars.forEach(car => {
-      if (car.year > 2000) {
-          console.log(car);
-      };
-  });
-
-  // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
-let totalCars = 0;
+// 2. filter all cars that were built after year 2000
 cars.forEach(car => {
-    if (car.year <= 2000) {
-        totalCars++;
+    if(car.year > 2000) {
+        console.log(car);
     };
 });
-console.log(totalCars);
 
-let totalCars2 = cars.reduce((total, cars) => {
-    if (cars.year <= 2000) {
-        total++;
+// 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
+let count = 0;
+cars.forEach(car => {
+    if(car.year <= 2000){
+        count++;
     };
-    return total;
-}, 0);
-console.log(totalCars2);
+});
+console.log(count);
 
-function oldCars(total, cars) {
-    if (cars.year <= 2000) {
-        total++;
-    };
-    return total;
+ // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
+
+let arr = [];
+for (let i=1; i<=100; i++) {
+    console.log(arr.push(i));
 };
-console.log(cars.reduce(oldCars, 0));
+
+arr.splice(50, 50);
+console.log(arr);
+
+let newArr = [];
+for (let i=2; i<=100; i+=2) {
+    newArr.push(i);
+};
+console.log(newArr);
