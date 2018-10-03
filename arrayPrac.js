@@ -60,6 +60,11 @@ const cars = [
     //         console.log(car.year);
     //     };
     // });
+
+    // function filterCars(car) {
+//     return car.year > 2000;
+// };
+// console.log(cars.filter(filterCars));
   
   // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
 //   let totalCars = 0;
