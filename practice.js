@@ -13,76 +13,99 @@ const cars = [
 
 // 1. console.log all the brand names contained in the cars array
 // cars.forEach(car => {
-//   console.log(car.model);
+//     console.log(car.brand);
 // });
 
 // 2. filter all cars that were built after year 2000
-// cars.forEach(car => {
-//   if (car.year > 2000) {
-//     console.log(car.brand);
-//   };
+// function filtered(cars) {
+//     return cars.year > 2000;
+// };
+// console.log(cars.filter(filtered));
+
+// cars.forEach(cars => {
+//     if (cars.year > 2000) {
+//         console.log(cars);
+//     };
 // });
 
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
-// let count = '';
-// cars.forEach(car => {
-//   if (car.year <= 2000) {
-//     count++;
-//   };
-//   return count;
-// });
-// console.log(count);
+let count = 0;
+cars.forEach(cars => {
+    if ( cars.year <= 2000) {
+        count++;
+    };
+});
+console.log(count);
 
-// let count = cars.reduce((total, car) => {
-// 	if (car.year <= 2000) {
-// 		total++;
-// 	};
-// 	return total;
-// }, 0);
+let reducedCount = cars.reduce((total, cars) => {
+    if (cars.year <= 2000) {
+        total++;
+    };
+    return total;
+}, 0);
+console.log(reducedCount);
 
-// console.log(count);
-
+function countReduced(total, cars) {
+    if (cars.year <= 2000) {
+        total++;
+    };
+    return total;
+};
+console.log(cars.reduce(countReduced, 0));
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
-// let newCars = [];
-
-// cars.forEach(car => {
-// 	if (car.year > 2000) {
-// 		let carObject = {
-// 			model: this.model,
-// 			year: this.year,
-// 		};
-// 		newCars.push(carObject);
-// 	};
-// });
-// console.log(newCars);
 
 
 
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
-let tempArr = [2, 5, 6, 3, 2, 7];
-tempArr.sort();
-console.log(tempArr);
 
-cars.sort((a, b) => {
-	if (a.model.toLowerCase() < b.model.toLowerCase()) {
-		return 1;
-	} else {
-		return -1;
-	};
-});
-console.log(cars);
+
+
+
 
 
 
 // 1. filter arr to only contain even numbers and save into new array.
 // 2. construct a new array that only contains numbers 1 through 50.
 
-// let arr = [];
-// for(let i=2; i<=100; i+=2 ) {
-//     console.log(i);
+
+
+// Challenge 1: Add all numbers
+// return a sum of all parameters regardless of the amount of numbers - NO arrays
+
+// // solution 1 - es5 argument & for loop
+// function addAll() {
+// 	var args = Array.prototype.slice.call(arguments);
+// 	var total = 0;
+// 	for (let i = 0; i < args.length; i++) {
+// 		total += args[i];
+// 	};
+// 	return total;
 // };
 
+// solution 2 - ...rest & reduce/forEach
+
+// function addAll(...rest) {
+//     return rest;
+// }
+
+
+// console.log(addAll(1, 2, 3, 4, 5, 6));
+
+
+// explaination of ...rest
+// let arr1 = [1, 2, 3, 4];
+// let arr2 = [2, 3, 4, 5];
+// arr1.push(...arr2);
+
+// function addAll() {
+// 	let total = 0;
+// 	arr1.forEach(number => {
+// 		total += number;
+// 	});
+// 	return total;
+// };
+// console.log(arr1.sort());
 

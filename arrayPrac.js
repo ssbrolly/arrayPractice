@@ -142,14 +142,14 @@ const cars = [
   //  5. sort the cars array by model name in ascending order
   //     hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
 
-  cars.sort((a, b) => {
-    if (a.model.toLowerCase() > b.model.toLowerCase()) {
-      return -1;
-    } else {
-      return 1;
-    };
-  });
-  console.log(cars);
+  // cars.sort((a, b) => {
+  //   if (a.model.toLowerCase() > b.model.toLowerCase()) {
+  //     return -1;
+  //   } else {
+  //     return 1;
+  //   };
+  // });
+  // console.log(cars);
 
 
 
@@ -169,3 +169,25 @@ const cars = [
 
 // 1. filter arr to only contain even numbers and save into new array.
 // 2. construct a new array that only contains numbers 1 through 50.
+
+
+
+// explaination of ...rest
+// let arr1 = [1, 2, 3, 4];
+// let arr2 = [2, 3, 4, 5];
+// arr1.push(...arr2);
+
+// function addAll() {
+// 	let total = 0;
+// 	arr1.forEach(number => {
+// 		total += number;
+// 	});
+// 	return total;
+// };
+// console.log(arr1.sort());
+
+// let death = ['your dead!']
+// let life = [1, 2, 3, ...death, 4, 5]
+
+// console.log(life);
+
