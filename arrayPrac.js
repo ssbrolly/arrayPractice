@@ -61,6 +61,9 @@ const cars = [
     //     };
     // });
 
+    // let filteredCars = cars.filter(car => car.year > 2000);
+    // console.log(filteredCars);
+
     // function filterCars(car) {
 //     return car.year > 2000;
 // };

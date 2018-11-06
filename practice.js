@@ -17,44 +17,65 @@ const cars = [
 // });
 
 // 2. filter all cars that were built after year 2000
-// function filtered(cars) {
-//     return cars.year > 2000;
-// };
-// console.log(cars.filter(filtered));
-
-// cars.forEach(cars => {
-//     if (cars.year > 2000) {
-//         console.log(cars);
+// cars.forEach(car => {
+//     if (car.year > 2000) {
+//         console.log(car);
 //     };
 // });
 
+// let filteredCars = cars.filter(car => car.year > 2000);
+// console.log(filteredCars);
+
+// let filteredCars1 = cars.filter(car => {
+//     return car.year > 2000;
+// });
+// console.log(filteredCars1);
+
+// function filteredCars2(car) {
+//     return car.year > 2000;
+// };
+// console.log(cars.filter(filteredCars2));
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
-let count = 0;
-cars.forEach(cars => {
-    if ( cars.year <= 2000) {
-        count++;
-    };
-});
-console.log(count);
+// let count = 0;
+// cars.forEach(car => {
+//     if (car.year <= 2000) {
+//         count++;
+//     };
+//     return count;
+// });
+// console.log(count);
 
-let reducedCount = cars.reduce((total, cars) => {
-    if (cars.year <= 2000) {
-        total++;
-    };
-    return total;
-}, 0);
-console.log(reducedCount);
+// let reducedCars = cars.reduce((total, car) => {
+//     if (car.year <= 2000) {
+//         total++;
+//     };
+//     return total;
+// }, 0);
+// console.log(reducedCars);
 
-function countReduced(total, cars) {
-    if (cars.year <= 2000) {
-        total++;
-    };
-    return total;
-};
-console.log(cars.reduce(countReduced, 0));
+// function reduceCars(total, car) {
+//     if (car.year <= 2000) {
+//         total++;
+//     };
+//     return total;
+// };
+// console.log(cars.reduce(reduceCars, 0));
+
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
+let newArr = [];
+cars.forEach(car => {
+    if (car.year > 2000) {
+        let modelYearObj = {
+            model: car.model,
+            year: car.year,
+        };
+        newArr.push(modelYearObj);
+    };
+});
+console.log(newArr);
+
 
 
 
