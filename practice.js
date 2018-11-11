@@ -63,16 +63,27 @@ const cars = [
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
 let newArr = [];
-cars.forEach(car =>{
+cars.forEach(car => {
     if (car.year > 2000) {
         let newModel = {
             model: car.model,
-            year : car.year,
+            year: car.year
         };
         newArr.push(newModel);
     };
 });
 console.log(newArr);
+
+let newArr2 = cars.map(car => {
+    if (car.year > 2000) {
+        let newModel2 = {
+            model: car.model,
+            year: car.year
+        };
+        return newModel2
+    };
+});
+console.log(newArr2);
 
 
 
