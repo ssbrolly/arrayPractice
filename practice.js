@@ -13,11 +13,12 @@ const cars = [
 
 // 1. console.log all the brand names contained in the cars array
 cars.forEach(car => {
-
-})
-
+    console.log(car.brand);
+});
 
 // 2. filter all cars that were built after year 2000
+cars.forEach
+
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
 
