@@ -12,78 +12,17 @@ const cars = [
   ];
 
 // 1. console.log all the brand names contained in the cars array
-// cars.forEach(car => {
-//     console.log(car.brand);
-// });
+cars.forEach(car => {
+
+})
+
 
 // 2. filter all cars that were built after year 2000
-// cars.forEach(car => {
-//     if (car.year > 2000) {
-//         console.log(car);
-//     };
-// });
-
-// let carsFiltered = cars.filter(car => {
-//     return car.year > 2000;
-// });
-// console.log(carsFiltered);
-
-// let carsFilter = cars.filter(car => car.year > 2000);
-// console.log(carsFilter);
-
-// function filteredCars(car) {
-//     return car.year > 2000;
-// };
-// console.log(cars.filter(filteredCars));
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
-// let count = 0;
-// cars.forEach(car => {
-//     if (car.year <= 2000) {
-//         count++;
-//     };
-// });
-// console.log(count);
-
-// let reducedCars = cars.reduce((total, car) => {
-//     if (car.year <= 2000) {
-//         total++;
-//     };
-//     return total; 
-// }, 0);
-// console.log(reducedCars);
-
-// function reduceCars(total, car) {
-//     if (car.year <= 2000) {
-//         total++;
-//     };
-//     return total;
-// };
-// console.log(cars.reduce(reduceCars, 0));
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
-let newArr = [];
-cars.forEach(car => {
-    if (car.year > 2000) {
-        let newModel = {
-            model: car.model,
-            year: car.year
-        };
-        newArr.push(newModel);
-    };
-});
-console.log(newArr);
 
-let newArr2 = cars.map(car => {
-    if (car.year > 2000) {
-        let newModel2 = {
-            model: car.model,
-            year: car.year
-        };
-        return newModel2
-    };
-});
-console.log(newArr2);
 
 
 
