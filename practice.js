@@ -17,8 +17,19 @@ cars.forEach(car => {
 });
 
 // 2. filter all cars that were built after year 2000
+cars.forEach(car => {
+    if (car.year > 2000) {
+        console.log(car);
+    };
+});
 
+let filteredCars = cars.filter(car => car.year > 2000);
+console.log(filteredCars);
 
+function carsFiltered(car) {
+    return car.year > 2000
+};
+console.log(cars.filter(carsFiltered));
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
 
