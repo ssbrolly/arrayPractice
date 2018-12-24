@@ -32,7 +32,29 @@ function carsFiltered(car) {
 console.log(cars.filter(carsFiltered));
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
+let count = [];
+cars.forEach(car => {
+    if (car.year <= 2000) {
+        count++;
+    };
+});
+console.log(count);
 
+let count2 = cars.reduce((total, car) => {
+    if (car.year <= 2000) {
+        total++;
+    }
+    return total;
+}, 0);
+console.log(count2);
+
+function totalCars(total, car) {
+    if (car.year <= 2000) {
+        total ++;
+    };
+    return total;
+};
+console.log(cars.reduce(totalCars, 0));
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
 
