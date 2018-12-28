@@ -98,8 +98,6 @@ cars.sort((a, b) => {
 console.log(cars);
 
 
-
-
 // 1. filter arr to only contain even numbers and save into new array.
 // 2. construct a new array that only contains numbers 1 through 50.
 
