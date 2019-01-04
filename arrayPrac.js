@@ -160,6 +160,22 @@ const cars = [
 // for (let i = 1; i <= 100; i++) {
 //     arr.push(i);
 // };
+
+// let evenArr = arr.filter(num => {
+//     return num % 2 === 0;;
+
+// });
+// console.log(evenArr);
+
+// function newArr() {
+//     let arr = [];
+//     for (let i = 0; i <= 100; i++) {
+//         arr.push(i);
+//     };
+//     return arr.filter(num => num % 2 === 0);
+// };
+// console.log(newArr());
+
 // arr.splice(50, 50);
 // console.log(arr);
 
