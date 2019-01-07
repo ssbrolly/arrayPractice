@@ -155,22 +155,16 @@ const cars = [
 
 
 // explaination of ...rest
-let arr1 = [1, 2, 3, 4];
-let arr2 = [2, 3, 4, 5];
-arr1.push(...arr2);
+// let arr1 = [1, 2, 3, 4];
+// let arr2 = [2, 3, 4, 5];
+// arr1.push(...arr2);
 
-// function addAll() {
-// 	let total = 0;
-// 	arr1.forEach(number => {
-// 		total += number;
-// 	});
-// 	return total;
-// };
-// console.log(addAll());
+function addAll() {
+	let total = 0;
+	arr1.forEach(number => {
+		total += number;
+	});
+	return total;
+};
+console.log(arr1.sort());
 
-let total = 0;
-let added = arr1.forEach(num => {
-    return total += num;
-    
-});
-console.log(added);
