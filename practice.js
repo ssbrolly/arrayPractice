@@ -87,14 +87,14 @@ const cars = [
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
 
-cars.sort((a, b) => {
-    if (a.model.toLowerCase() > b.model.toLowerCase()) {
-        return -1;
-    } else {
-        return 1;
-    };
-});
-console.log(cars);
+// cars.sort((a, b) => {
+//     if (a.model.toLowerCase() > b.model.toLowerCase()) {
+//         return -1;
+//     } else {
+//         return 1;
+//     };
+// });
+// console.log(cars);
 
 
 // 1. filter arr to only contain even numbers and save into new array.
