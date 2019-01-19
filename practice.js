@@ -153,7 +153,6 @@ const cars = [
 
 // console.log(addAll(1, 2, 3, 4, 5, 6));
 
-
 // explaination of ...rest
 // let arr1 = [1, 2, 3, 4];
 // let arr2 = [2, 3, 4, 5];
