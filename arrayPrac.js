@@ -55,19 +55,32 @@ const cars = [
 
   // 2. filter all cars that were built after year 2000
 
-    // cars.forEach(car => {
-    //     if (car.year > 2000) {
-    //         console.log(car.year);
-    //     };
-    // });
+// cars.forEach(car => {
+//     if (car.year > 2000) {
+//         console.log(car.year);
+//     };
+// });
 
-    // let filteredCars = cars.filter(car => car.year > 2000);
-    // console.log(filteredCars);
+// let filteredCars = cars.filter(car => car.year > 2000);
+// console.log(filteredCars);
 
-    // function filterCars(car) {
+// function filterCars(car) {
 //     return car.year > 2000;
 // };
 // console.log(cars.filter(filterCars));
+
+// cars.filter(car => {
+//     if (car.year > 2000) {
+//         console.log(car);
+//     };
+// });
+
+// for (let i = 0; i < cars.length; i++) {
+//     if (cars[i].year > 2000) {
+//         console.log(cars[i]);
+//     };
+// };
+
   
   // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
 //   let totalCars = 0;
