@@ -24,16 +24,18 @@ const cars = [
 //     console.log(car.brand);
 // });
 
-
 // 2. filter all cars that were built after year 2000
-// cars.filter(car => {
+// cars.forEach(car => {
 //     if (car.year > 2000) {
 //         console.log(car);
 //     };
 // });
 
-// let carsFiltered = cars.filter(car => car.year > 2000);
-// console.log(carsFiltered);
+// cars.filter(car => {
+//     if (car.year > 2000) {
+//         console.log(car);
+//     };
+// });
 
 // for (let i = 0; i < cars.length; i++) {
 //     if (cars[i].year > 2000) {
@@ -41,16 +43,6 @@ const cars = [
 //     };
 // };
 
-// function filteredCars(car) {
-//     return car.year > 2000;
-// };
-// console.log(cars.filter(filteredCars));
-
-// cars.forEach(car => {
-//     if (car.year > 2000) {
-//         console.log(car);
-//     };
-// });
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
 // let count = 0;
@@ -77,13 +69,6 @@ const cars = [
 // };
 // console.log(cars.reduce(carsReduced, 0));
 
-for (let i = 0; i < cars.length; i++) {
-    let count = 0;
-    if (cars[i].year <= 2000) {
-        count += cars[i];
-    }
-    return count;
-};
 
 
 
@@ -102,8 +87,8 @@ for (let i = 0; i < cars.length; i++) {
 
 // let newArr = [];
 // for (let i = 0; i < cars.length; i++) {
-//     let car = cars[i]
-//     if (car.year <= 2000) {
+//     let car = cars[i];
+//     if (car.year > 2000) {
 //         let newObj = {
 //             model: car.model,
 //             year: car.year,
@@ -111,10 +96,9 @@ for (let i = 0; i < cars.length; i++) {
 //         newArr.push(newObj);
 //     };
 // };
-
 // console.log(newArr);
 
-// let newModel = cars.filter(car => {
+// let newArr = cars.filter(car => {
 //     return car.year > 2000;
 // }).map(car => {
 //     return {
@@ -122,19 +106,18 @@ for (let i = 0; i < cars.length; i++) {
 //         year: car.year,
 //     };
 // });
-// console.log(newModel);
-
+// console.log(newArr);
 
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
 // cars.sort((a, b) => {
 //     if (a.model.toLowerCase() > b.model.toLowerCase()) {
 //         return -1;
-//     } else {
-//         return 1;
-//     };
+//     } 
+//     return 1;
 // });
 // console.log(cars);
+
 
 // 1. filter arr to only contain even numbers and save into new array.
 // let arr = [];

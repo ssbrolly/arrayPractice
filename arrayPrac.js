@@ -130,6 +130,19 @@ const cars = [
 //       };
 //   });
 
+// let newArr = [];
+// for (let i = 0; i < cars.length; i++) {
+//     let car = cars[i]
+//     if (car.year <= 2000) {
+//         let newObj = {
+//             model: car.model,
+//             year: car.year,
+//         };
+//         newArr.push(newObj);
+//     };
+// };
+
+
 // let newModel = cars.filter(car => {
 //     return car.year > 2000;
 // }).map(car => {
