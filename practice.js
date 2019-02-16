@@ -120,15 +120,15 @@ const cars = [
 
 
 // 1. filter arr to only contain even numbers and save into new array.
-// let arr = [];
-// for (let i = 1; i <= 100; i++) {
-//     arr.push(i);
-// };
+let arr = [];
+for (let i = 1; i <= 100; i++) {
+    arr.push(i);
+};
 
-// let newArr = arr.filter(num => {
-//     return num % 2 === 0;
-// });
-// console.log(newArr.splice(10, 10));
+let newArr = arr.filter(num => {
+    return num % 2 === 0;
+});
+console.log(newArr);
 
 // function arrNew() {
 //     let arr = [];
