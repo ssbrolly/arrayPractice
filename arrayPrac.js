@@ -53,6 +53,23 @@ const cars = [
 //       console.log(car.brand);
 //   });
 
+// for (let i = 0; i < cars.length; i++) {
+//     console.log(cars[i].brand);
+// };
+
+// cars.filter(car => {
+//     console.log(car.brand);
+// });
+
+// function logCars(car) {
+//     for (let i = 0; i < car.length; i++) {
+//         console.log(car[i].brand);
+//     }; 
+// };
+
+// logCars(cars);
+
+
   // 2. filter all cars that were built after year 2000
 
 // cars.forEach(car => {
