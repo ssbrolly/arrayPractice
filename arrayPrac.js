@@ -42,10 +42,6 @@ const cars = [
   
   
   
-  
-  
-  
-  
   //  **  console.log all answers below
   
   // 1. console.log all the brand names contained in the cars array
