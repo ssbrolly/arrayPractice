@@ -14,7 +14,7 @@ const cars = [
 // 1. console.log all the brand names contained in the cars array
 // for (let i = 0; i < cars.length; i++) {
 //     console.log(cars[i].brand);
-// };
+// }
 
 // cars.forEach(car => {
 //     console.log(car.brand);
@@ -25,110 +25,62 @@ const cars = [
 // });
 
 // 2. filter all cars that were built after year 2000
-// cars.forEach(car => {
-//     if (car.year > 2000) {
-//         console.log(car);
-//     };
-// });
-
 // cars.filter(car => {
 //     if (car.year > 2000) {
 //         console.log(car);
 //     };
 // });
 
+// cars.forEach(car => {
+//     if (car.year > 2000) {
+//         console.log(car);
+//     };
+// });
+
+// function newCars(car) {
+//     return car.year > 2000;
+// };
+// console.log(cars.filter(newCars));
+
+// let filteredCars = cars.filter(car => car.year > 2000);
+// console.log(filteredCars);
+
+// let filteredCars = cars.filter(car => {
+//     return car.year > 2000;
+// });
+// console.log(filteredCars);
+
 // for (let i = 0; i < cars.length; i++) {
 //     if (cars[i].year > 2000) {
-//         console.log(cars[i]);
-//     };
+//         console.log(cars[i].brand);
+//     } ;
 // };
+
 
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
-// let count = 0;
-// cars.forEach(car => {
-//     if (car.year <= 2000) {
-//         count++;
-//     };
-// });
-// console.log(count);
-
-// let reducedCars = cars.reduce((total, car) => {
-//     if (car.year <= 2000) {
-//         total++;
-//     };
-//     return total;
-// }, 0);
-// console.log(reducedCars);
-
-// function carsReduced(total, car) {
-//     if (car.year <= 2000) {
-//         total++;
-//     };
-//     return total;
-// };
-// console.log(cars.reduce(carsReduced, 0));
 
 
 
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
-// let newArr = [];
-// cars.forEach(car => {
-//     if (car.year > 2000) {
-//         let newObj = {
-//             model: car.model,
-//             year: car.year,
-//         };
-//         newArr.push(newObj);
-//     };
-// });
-// console.log(newArr);
 
-// let newArr = [];
-// for (let i = 0; i < cars.length; i++) {
-//     let car = cars[i];
-//     if (car.year > 2000) {
-//         let newObj = {
-//             model: car.model,
-//             year: car.year,
-//         };
-//         newArr.push(newObj);
-//     };
-// };
-// console.log(newArr);
-
-// let newArr = cars.filter(car => {
-//     return car.year > 2000;
-// }).map(car => {
-//     return {
-//         model: car.model,
-//         year: car.year,
-//     };
-// });
-// console.log(newArr);
 
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
-// cars.sort((a, b) => {
-//     if (a.model.toLowerCase() > b.model.toLowerCase()) {
-//         return -1;
-//     } 
-//     return 1;
-// });
-// console.log(cars);
+
 
 
 // 1. filter arr to only contain even numbers and save into new array.
-let arr = [];
-for (let i = 1; i <= 100; i++) {
-    arr.push(i);
-};
+// let arr = [];
+// for (let i = 1; i <= 100; i++) {
+//     arr.push(i);
+// };
 
-let newArr = arr.filter(num => {
-    return num % 2 === 0;
-});
-console.log(newArr);
+// let newArr = arr.filter(num => {
+//     return num % 2 === 0;
+// });
+// console.log(newArr);
 
 // function arrNew() {
 //     let arr = [];
