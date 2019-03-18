@@ -56,20 +56,67 @@ const cars = [
 //     } ;
 // };
 
-
-
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
+// let count = 0;
+// cars.forEach(car => {
+//     if (car.year <= 2000) {
+//         count++;
+//     };
+// });
+// console.log(count);
 
+// let reducedCars = cars.reduce((total, car) => {
+//     if (car.year <= 2000) {
+//         total++;
+//     };
+//     return total;
+// }, 0);
+// console.log(reducedCars);
 
+// let count = 0;
+// for (let i = 0; i < cars.length; i++) {
+//     if (cars[i].year <= 2000) {
+//         count++;
+//     };
+// };
+// console.log(count);
 
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
 
+// let newArr = [];
+// cars.forEach(car => {
+//     if (car.year > 2000) {
+//         let newObj = {
+//             model: car.model,
+//             year: car.year,
+//         };
+//         newArr.push(newObj);
+//     };
+// });
+// console.log(newArr);
+
+// let filteredCars = cars.filter(car => {
+//     return car.year >2000
+// }).map(car => {
+//     return {
+//         model: car.model,
+//         year: car.year,
+//     };
+// });
+// console.log(filteredCars);
 
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
 
-
+// cars.sort((a, b)=> {
+//     if (a.model.toLowerCase() < b.model.toLowerCase()) {
+//         return -1;
+//     } else {
+//         return 1;
+//     };
+// });
+// console.log(cars);
 
 // 1. filter arr to only contain even numbers and save into new array.
 // let arr = [];
