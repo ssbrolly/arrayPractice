@@ -102,7 +102,7 @@ const cars = [
 // console.log(newArr);
 
 // let filteredCars = cars.filter(car => {
-//     return car.year >2000
+//     return car.year > 2000;
 // }).map(car => {
 //     return {
 //         model: car.model,
@@ -110,6 +110,7 @@ const cars = [
 //     };
 // });
 // console.log(filteredCars);
+
 
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
