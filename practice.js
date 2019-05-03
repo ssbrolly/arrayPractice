@@ -20,19 +20,74 @@ const cars = [
 //     console.log(car.brand);
 // });
 
-for (let i = 0; i < cars.length; i++) {
-    console.log(cars[i].brand);
-};
+// for (let i = 0; i < cars.length; i++) {
+//     console.log(cars[i].brand);
+// };
 
+// function showBrands(cars) {
+//     cars.forEach(car => {
+//         console.log(car.brand);
+//     });
+// };
+// showBrands(cars);
 
 
 // 2. filter all cars that were built after year 2000
+// cars.forEach(car => {
+//     if (car.year > 2000) {
+//         console.log(car);
+//     };
+// });
 
+// let filteredCars = cars.filter(car => car.year > 2000);
+// console.log(filteredCars);
+
+// cars.filter(car => {
+//     if (car.year > 2000) {
+//         console.log(car);
+//     };
+// });
+
+// for (let i = 0; i < cars.length; i++) {
+//     if (cars[i].year > 2000) {
+//         console.log(cars[i]);
+//     };
+// };
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
+// total = 0;
+// cars.forEach(car => {
+//     if (car.year <= 2000) {
+//         total++;
+//     };
+//     return total;
+// });
+// console.log(total);
+
+// let reducedCars = cars.reduce((total, car) => {
+//     if (car.year <= 2000) {
+//         total++;
+//     };
+//     return total;
+// }, 0);
+// console.log(reducedCars);
+
+
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
+// let array = [];
+// cars.forEach(car => {
+//     if (car.year > 2000) {
+//         let newArr = {
+//             model: car.model,
+//             year: car.year
+//         };
+//         array.push(newArr);
+//     };
+// });
+// console.log(array);
 
+//  
 
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
