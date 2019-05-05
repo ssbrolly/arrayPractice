@@ -85,7 +85,27 @@ const cars = [
 // });
 // console.log(array);
 
+// let arr = [];
+// for (let i = 0; i < cars.length; i++) {
+//     if (cars[i].year > 2000) {
+//         let newArr = {
+//             model: cars[i].model,
+//             year: cars[i].year,
+//         };
+//         arr.push(newArr);
+//     };
+// };
+// console.log(arr);
 
+// let filteredCars = cars.filter(car => {
+//     return car.year > 2000;
+// }).map(car => {
+//     return {
+//         model: car.model,
+//         year: car.year,
+//     };    
+// });
+// console.log(filteredCars);
 
 
 //5. sort the cars array by model name in ascending order
