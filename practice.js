@@ -72,8 +72,6 @@ const cars = [
 // }, 0);
 // console.log(reducedCars);
 
-
-
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
 // let array = [];
 // cars.forEach(car => {
@@ -87,7 +85,8 @@ const cars = [
 // });
 // console.log(array);
 
-//  
+
+
 
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
