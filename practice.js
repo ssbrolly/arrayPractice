@@ -12,7 +12,7 @@ const cars = [
   ];
 
 // 1. console.log all the brand names contained in the cars array
-// cars.filter(car => console.log(car.brand));
+cars.filter(car => console.log(car.brand));
 
 // cars.forEach(car => console.log(car.brand));
 
