@@ -59,6 +59,7 @@ const cars = [
 // console.log(total)
 
 
+
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
 
 // let newArr = [];
