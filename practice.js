@@ -12,77 +12,43 @@ const cars = [
   ];
 
 // 1. console.log all the brand names contained in the cars array
+// cars.forEach(car => {
+//     console.log(car.brand);
+// });
 
-// function forEachFunc(list, callback) {
+// cars.filter(car => {
+//     console.log(car.brand);
+// })
+
+// for (let i = 0; i < cars.length; i++) {
+//     console.log(cars[i].brand);
+// };
+
+// function forEachMethod(list, callback) {
 //     for (let i = 0; i < list.length; i++) {
 //         callback(list[i], i);
 //     };
 // };
 
-// forEachFunc(cars, (cur) => {
-//     console.log(cur.brand);
+// forEachMethod(cars, (car) => {
+//     console.log(car.brand);
 // });
+
 
 // 2. filter all cars that were built after year 2000
 
-// function filterFunc(list, callback) {
-//     for (let i = 0; i < list.length; i++) {
-//         callback(list[i], i)
-//     };
-// };
 
-// filterFunc(cars, cur => {
-//     newArr = [];
-//     if (cur.year > 2000) {
-//         newArr.push(cur);
-//         console.log(newArr);
-//     };
-// });
 
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
 
-// let reducedCars = cars.reduce((total, cur) => {
-//     if (cur.year <= 2000) {
-//         total++;
-//     }
-//     return total;
-// }, 0)
-// console.log(reducedCars)
-
-
-// let total = 0;
-// cars.forEach(car => {
-//     if (car.year <= 2000) {
-//         total++;
-//     }
-// });
-// console.log(total)
 
 
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
 
-// let newArr = [];
-// cars.forEach(cur => {
-//     if (cur.year > 2000) {
-//         let newObj = {
-//             model: cur.model,
-//             year: cur.year
-//         };
-//         newArr.push(newObj);
-//     };
-// });
-// console.log(newArr);
-
 
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
-
-// 1. filter arr to only contain even numbers and save into new array.
-// let arr = [];
-// for (let i = 1; i <= 100; i++) {
-//     arr.push(i);
-// };
 
 // let newArr = arr.filter(num => {
 //     return num % 2 === 0;
@@ -153,4 +119,159 @@ const cars = [
 // 	return total;
 // };
 // console.log(arr1.sort());
+
+
+
+const companies = [
+    { name: "Company One", category: "Finance", start: 1981, end: 2003 },
+    { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
+    { name: "Company Three", category: "Auto", start: 1999, end: 2007 },
+    { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
+    { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
+    { name: "Company Six", category: "Finance", start: 1987, end: 2010 },
+    { name: "Company Seven", category: "Auto", start: 1986, end: 1996 },
+    { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
+    { name: "Company Nine", category: "Retail", start: 1981, end: 1989 }
+];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+// let canDrink = ages.filter(age => {
+//     if (age >= 21) {
+//         return true;
+//     }
+// })
+
+// console.log(canDrink);
+
+// let sedan = cars.filter(car => {
+//     if (car.type === 'Sedan') {
+//         return car;
+//     }
+// }).map(car => {
+//     return car.brand;
+// });
+// console.log(sedan);
+
+// Eighties Company
+
+// let eightiesCompany = companies.filter(com => (com.start >= 1980 && com.start < 1990));
+// console.log(eightiesCompany);
+
+// Get companies that lasted 10 years or more
+
+// let lastedCompany = companies.filter(com => (com.end - com.start >= 10));
+// console.log(lastedCompany);
+
+
+// .map()
+// Create array of company names;
+
+// const compArray = companies.map(com => {
+//     return `${com.name} [${com.start} - ${com.end}]`
+// });
+
+// const compArray = companies.map(com => `${com.name} [${com.start} - ${com.end}]`);
+// console.log(compArray)
+
+// const agesSquare = ages.map(com => Math.round(Math.sqrt(com)));
+// console.log(agesSquare); 
+
+
+// .sort()
+
+// const sortedCompanies = companies.sort((a, b) => (a.start > b.start) ?  1 : - 1);
+
+// const sortedCompanies = companies.sort((a, b) => {
+//     if (a.start > b.start) {
+//         return -1
+//     } else {
+//         return 1
+//     }
+// })
+
+// console.log(sortedCompanies);
+
+
+// .reduce()
+
+// Add all the numbers together in the ages array
+
+// let total = 0;
+// ages.forEach(age => {
+//     return total += age
+// })
+// console.log(total);
+
+// const totalAges = ages.reduce((total, age) => {
+//     return age + total;
+// }, 0);
+// console.log(totalAges);
+
+// total = 0;
+// const companyYears = companies.forEach(com => {
+//     return total += (com.end - com.start);
+// })
+
+// const companyYears = companies.reduce((total, com) => {
+//     return total + (com.end - com.start);
+// }, 0)
+
+// console.log(companyYears);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
