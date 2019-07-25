@@ -12,36 +12,12 @@ const cars = [
   ];
 
 // 1. console.log all the brand names contained in the cars array
-// cars.forEach(car => {
-//     console.log(car.brand);
-// });
-
-// cars.filter(car => {
-//     console.log(car.brand);
-// })
-
-// for (let i = 0; i < cars.length; i++) {
-//     console.log(cars[i].brand);
-// };
-
-// function forEachMethod(list, callback) {
-//     for (let i = 0; i < list.length; i++) {
-//         callback(list[i], i);
-//     };
-// };
-
-// forEachMethod(cars, (car) => {
-//     console.log(car.brand);
-// });
 
 
 // 2. filter all cars that were built after year 2000
 
 
-
 // 3. count the number of cars that were built on or before year 2000 (hint:  reduce)
-
-
 
 
 // 4. Grab just 'model' and 'year' of the cars that were built after year 2000 and save into a new array
@@ -49,6 +25,7 @@ const cars = [
 
 //5. sort the cars array by model name in ascending order
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
+
 
 // let newArr = arr.filter(num => {
 //     return num % 2 === 0;
@@ -167,9 +144,13 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // .map()
 // Create array of company names;
 
-// const compArray = companies.map(com => {
-//     return `${com.name} [${com.start} - ${com.end}]`
-// });
+const assign = function() {
+    companies.forEach(com => {
+        const ages = com.end - com.start;
+        console.log(`${com.name} is ${ages} years old`);
+    });
+}
+assign();
 
 // const compArray = companies.map(com => `${com.name} [${com.start} - ${com.end}]`);
 // console.log(compArray)
