@@ -27,6 +27,7 @@ const cars = [
 // hint:  make case insensitive.  4th item "camry" has lower case.  Make sure the sort results in correct ascending order ignoring the case.
 
 
+
 // let newArr = arr.filter(num => {
 //     return num % 2 === 0;
 // });
@@ -99,6 +100,61 @@ const cars = [
 
 
 
+//Es 6 Methods
+
+// const firstName = 'John';
+// const lastName = 'Smith';
+
+// const n = `${firstName} ${lastName}`;
+
+// //New mthods are case sensitive
+// console.log(n);
+// console.log(n.startsWith('J'));
+// console.log(n.endsWith('ith'));
+// console.log(n.includes(' '));
+// console.log(`${n} `.repeat(5));
+
+
+// function Person(name) {
+//     this.name = name;
+// };
+
+// const friends = ['John', 'Jane', 'Dick', 'Mike'];
+
+// Person.prototype.myFriends = (friends) => {
+//     const arr = friends.map(el => `${this.name} is friends with ${el}`);
+//     console.log(arr);
+// };
+
+// new Person('Ike').myFriends(friends);
+
+
+//DESTRUCTURING
+// const john = ['John', 20]
+
+// const [name, age] = john;
+// console.log(`${name} ${age}`);
+
+// const obj = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+// };
+
+// const {firstName, lastName} = obj;
+// console.log(`${firstName} ${lastName}`);
+
+
+// function calcAgeRrtirement(year) {
+//     const age = new Date().getFullYear() - year;
+//     const retirement = 65 - age;
+//     return [age, retirement];
+// };
+
+// const [age, retirement] = calcAgeRrtirement(1979);
+// console.log(age, retirement);
+
+
+
 const companies = [
     { name: "Company One", category: "Finance", start: 1981, end: 2003 },
     { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
@@ -113,92 +169,6 @@ const companies = [
 
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
-// let canDrink = ages.filter(age => {
-//     if (age >= 21) {
-//         return true;
-//     }
-// })
-
-// console.log(canDrink);
-
-// let sedan = cars.filter(car => {
-//     if (car.type === 'Sedan') {
-//         return car;
-//     }
-// }).map(car => {
-//     return car.brand;
-// });
-// console.log(sedan);
-
-// Eighties Company
-
-// let eightiesCompany = companies.filter(com => (com.start >= 1980 && com.start < 1990));
-// console.log(eightiesCompany);
-
-// Get companies that lasted 10 years or more
-
-// let lastedCompany = companies.filter(com => (com.end - com.start >= 10));
-// console.log(lastedCompany);
-
-
-// .map()
-// Create array of company names;
-
-const assign = function() {
-    companies.forEach(com => {
-        const ages = com.end - com.start;
-        console.log(`${com.name} is ${ages} years old`);
-    });
-}
-assign();
-
-// const compArray = companies.map(com => `${com.name} [${com.start} - ${com.end}]`);
-// console.log(compArray)
-
-// const agesSquare = ages.map(com => Math.round(Math.sqrt(com)));
-// console.log(agesSquare); 
-
-
-// .sort()
-
-// const sortedCompanies = companies.sort((a, b) => (a.start > b.start) ?  1 : - 1);
-
-// const sortedCompanies = companies.sort((a, b) => {
-//     if (a.start > b.start) {
-//         return -1
-//     } else {
-//         return 1
-//     }
-// })
-
-// console.log(sortedCompanies);
-
-
-// .reduce()
-
-// Add all the numbers together in the ages array
-
-// let total = 0;
-// ages.forEach(age => {
-//     return total += age
-// })
-// console.log(total);
-
-// const totalAges = ages.reduce((total, age) => {
-//     return age + total;
-// }, 0);
-// console.log(totalAges);
-
-// total = 0;
-// const companyYears = companies.forEach(com => {
-//     return total += (com.end - com.start);
-// })
-
-// const companyYears = companies.reduce((total, com) => {
-//     return total + (com.end - com.start);
-// }, 0)
-
-// console.log(companyYears);
 
 
 
