@@ -154,6 +154,18 @@ const cars = [
 // console.log(age, retirement);
 
 
+//FOR OF LOOP
+
+// const boxes = [1, 2, 3, 4, 5, 6]
+
+// for (const cur of boxes) {
+//     if (cur === 3) {
+//         continue;
+//     }
+//     console.log(cur);
+// };
+
+
 
 const companies = [
     { name: "Company One", category: "Finance", start: 1981, end: 2003 },
