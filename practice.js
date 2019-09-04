@@ -165,8 +165,6 @@ const cars = [
 //     console.log(cur);
 // };
 
-
-
 const companies = [
     { name: "Company One", category: "Finance", start: 1981, end: 2003 },
     { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
@@ -179,13 +177,15 @@ const companies = [
     { name: "Company Nine", category: "Retail", start: 1981, end: 1989 }
 ];
 
-const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+// let ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+// const fullAgeIndex = [];
 
-
-
-
-
-
+// const age = ages.map((el, index) => {
+//     if (el <= 18) {
+//         return el;
+//     };
+// });
+// console.log(age);
 
 
 
