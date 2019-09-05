@@ -205,22 +205,22 @@ const companies = [
 
 //ES5
  
-function isFullAge() {
-    let argsArr = Array.prototype.slice.call(arguments);
+// function isFullAge() {
+//     let argsArr = Array.prototype.slice.call(arguments);
 
-    argsArr.forEach(cur => {
-        if ((new Date().getFullYear() - cur) >= 18) {
-            console.log(cur);
-        };
-    });
-};
-// isFullAge(1999, 1978, 1979, 2000, 2010, 2015, 2011);
+//     argsArr.forEach(cur => {
+//         if ((new Date().getFullYear() - cur) >= 18) {
+//             console.log(cur);
+//         };
+//     });
+// };
+// // isFullAge(1999, 1978, 1979, 2000, 2010, 2015, 2011);
 
-// turns values in to an array
-function isFullAge6(...years) {
-    console.log(years);
-};
-isFullAge6(1999, 1978, 1979, 2000, 2010, 2015, 2011)
+// // turns values in to an array
+// function isFullAge6(...years) {
+//     console.log(years);
+// };
+// isFullAge6(1999, 1978, 1979, 2000, 2010, 2015, 2011)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //DEFAULT PARAMETERS
@@ -289,6 +289,55 @@ isFullAge6(1999, 1978, 1979, 2000, 2010, 2015, 2011)
 
 // const ans = parseInt(prompt('Write the correct answer'));
 // console.log(question.get(ans === question.get('correct')));
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//CALSSES
+
+class Person6 {
+    constructor(name, yearOfBirth, job) {
+        this.name = name,
+        this.yearOfBirth = yearOfBirth,
+        this.job = job
+    };
+
+    calculateAge() {
+        const age = new Date().getFullYear() - this.yearOfBirth;
+        console.log(age);
+    };
+};
+const john = new Person6('john', 1990, 'teacher');
+john.calculateAge()
+
+class Athelete extends Person6 {
+    constructor(name, yearOfBirth, job, olympicGames, medals) {
+        super(name, yearOfBirth, job);
+        this.olympicGames = olympicGames,
+        this.medals = medals
+    };
+
+    wonMedals() {
+        this.medals++;
+        console.log(this.medals);
+    };
+};
+
+const johnAthelete = new Athelete('John', 1990, 'swimmer', 3, 10);
+johnAthelete.wonMedals();
+johnAthelete.calculateAge();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
