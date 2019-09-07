@@ -293,41 +293,55 @@ const companies = [
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //CALSSES
 
-class Person6 {
-    constructor(name, yearOfBirth, job) {
-        this.name = name,
-        this.yearOfBirth = yearOfBirth,
-        this.job = job
-    };
+// class Person6 {
+//     constructor(name, yearOfBirth, job) {
+//         this.name = name,
+//         this.yearOfBirth = yearOfBirth,
+//         this.job = job
+//     };
 
-    calculateAge() {
-        const age = new Date().getFullYear() - this.yearOfBirth;
-        console.log(age);
-    };
+//     calculateAge() {
+//         const age = new Date().getFullYear() - this.yearOfBirth;
+//         console.log(age);
+//     };
+// };
+// const john = new Person6('john', 1990, 'teacher');
+// john.calculateAge()
+
+// class Athelete extends Person6 {
+//     constructor(name, yearOfBirth, job, olympicGames, medals) {
+//         super(name, yearOfBirth, job);
+//         this.olympicGames = olympicGames,
+//         this.medals = medals
+//     };
+
+//     wonMedals() {
+//         this.medals++;
+//         console.log(this.medals);
+//     };
+// };
+
+// const johnAthelete = new Athelete('John', 1990, 'swimmer', 3, 10);
+// johnAthelete.wonMedals();
+// johnAthelete.calculateAge();
+
+
+function getWeather(id) {
+    fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`)
+    .then(result => {
+        console.log(result);
+        return result.json();
+    })
+    .then(data => {
+        const today = data.consolidated_weather[0];
+        console.log(`${data.title} ${today.max_temp} ${today.min_temp}`)
+    })
+    .catch(error => {
+        console.log(error);
+    })
 };
-const john = new Person6('john', 1990, 'teacher');
-john.calculateAge()
-
-class Athelete extends Person6 {
-    constructor(name, yearOfBirth, job, olympicGames, medals) {
-        super(name, yearOfBirth, job);
-        this.olympicGames = olympicGames,
-        this.medals = medals
-    };
-
-    wonMedals() {
-        this.medals++;
-        console.log(this.medals);
-    };
-};
-
-const johnAthelete = new Athelete('John', 1990, 'swimmer', 3, 10);
-johnAthelete.wonMedals();
-johnAthelete.calculateAge();
-
-
-
-
+getWeather(2487956);
+getWeather(44418);
 
 
 
