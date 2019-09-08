@@ -325,7 +325,7 @@ const companies = [
 // johnAthelete.wonMedals();
 // johnAthelete.calculateAge();
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // function getWeather(id) {
 //     fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`)
 //     .then(result => {
@@ -341,25 +341,38 @@ const companies = [
 //     })
 // };
 
-async function getWeather2(id) {
-    try {
-        const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`);
-        const data = await result.json();
-        const today = data.consolidated_weather[0];
-        console.log(`${data.title} ${today.min_tmep} ${today.max_temp}`);
-        return data;
+// async function getWeather2(id) {
+//     try {
+//         const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`);
+//         const data = await result.json();
+//         const today = data.consolidated_weather[0];
+//         console.log(`${data.title} ${today.min_tmep} ${today.max_temp}`);
+//         return data;
 
-    } catch(error) {
-        console.log(error);
-    };
-};
-getWeather2(44418);
-let dataSan;
-getWeather2(2487956).then(data => {
-    dataSan = data;
-    console.log(dataSan);
-});
+//     } catch(error) {
+//         console.log(error);
+//     };
+// };
+// getWeather2(44418);
+// let dataSan;
+// getWeather2(2487956).then(data => {
+//     dataSan = data;
+//     console.log(dataSan);
+// });
     
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//PROMISES
+
+// const getIds = new Promise((resolve, reject) =>{
+//     setTimeout(() => {
+//         resolve([523, 883, 334, 299]);
+//     }, 1500);
+// });
+
+// getIds.then(Ids => {
+//     console.log(Ids);
+// });
+
 
 
 
