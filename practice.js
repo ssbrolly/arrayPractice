@@ -326,33 +326,40 @@ const companies = [
 // johnAthelete.calculateAge();
 
 
-function getWeather(id) {
-    fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`)
-    .then(result => {
-        console.log(result);
-        return result.json();
-    })
-    .then(data => {
+// function getWeather(id) {
+//     fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`)
+//     .then(result => {
+//         console.log(result);
+//         return result.json();
+//     })
+//     .then(data => {
+//         const today = data.consolidated_weather[0];
+//         console.log(`${data.title} ${today.max_temp} ${today.min_temp}`)
+//     })
+//     .catch(error => {
+//         console.log(error);
+//     })
+// };
+
+async function getWeather2(id) {
+    try {
+        const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`);
+        const data = await result.json();
         const today = data.consolidated_weather[0];
-        console.log(`${data.title} ${today.max_temp} ${today.min_temp}`)
-    })
-    .catch(error => {
+        console.log(`${data.title} ${today.min_tmep} ${today.max_temp}`);
+        return data;
+
+    } catch(error) {
         console.log(error);
-    })
+    };
 };
-getWeather(2487956);
-getWeather(44418);
-
-
-
-
-
-
-
-
-
-
-
+getWeather2(44418);
+let dataSan;
+getWeather2(2487956).then(data => {
+    dataSan = data;
+    console.log(dataSan);
+});
+    
 
 
 
